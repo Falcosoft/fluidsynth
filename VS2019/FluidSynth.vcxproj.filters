@@ -1,0 +1,460 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <ItemGroup>
+    <Filter Include="Documents">
+      <UniqueIdentifier>{E604889E-324F-56EE-B835-80974CB32C08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{A48699E2-D2AF-5440-BC53-345FFC462BD9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{24BDBEDF-A009-5AD6-964B-10011ABBD4D7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{0DD03AF3-2DF9-596C-8C2D-582D3565CFDA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\bindings">
+      <UniqueIdentifier>{791E3C8B-77A2-562C-A95A-12EE8E0CFCD3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\drivers">
+      <UniqueIdentifier>{4EE7C30C-85EF-5AA0-9BB9-3B80B6290569}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gentables">
+      <UniqueIdentifier>{3A6A40B5-F112-5741-AD16-95F5F90D049F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\midi">
+      <UniqueIdentifier>{3600FDBB-B3FC-5C10-BD72-CE72E5C6C466}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\rvoice">
+      <UniqueIdentifier>{6A55D712-4079-51C0-9962-5C98C1262730}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\sfloader">
+      <UniqueIdentifier>{89C10B0D-F083-58C1-A04D-17BE99FFA556}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\synth">
+      <UniqueIdentifier>{4A03B787-5AC3-556C-813A-7ED3E73B729E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utils">
+      <UniqueIdentifier>{BAD55EA2-ED7F-5319-B993-254CD00661DA}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(FluidSynthSourceDir)src\utils\fluid_sys_cpp11.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\utils\fluid_file.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\gentables\fluid_ct2hz.cpp">
+      <Filter>Source Files\gentables</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\gentables\fluid_cb2amp.cpp">
+      <Filter>Source Files\gentables</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\gentables\fluid_concave.cpp">
+      <Filter>Source Files\gentables</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\gentables\fluid_convex.cpp">
+      <Filter>Source Files\gentables</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\gentables\fluid_pan.cpp">
+      <Filter>Source Files\gentables</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\gentables\fluid_interp_coeff.cpp">
+      <Filter>Source Files\gentables</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\gentables\fluid_interp_coeff_linear.cpp">
+      <Filter>Source Files\gentables</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\gentables\fluid_interp_coeff_sinc7.cpp">
+      <Filter>Source Files\gentables</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\utils\fluid_conv.c">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\utils\fluid_hash.c">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\utils\fluid_list.c">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\utils\fluid_ringbuffer.c">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\utils\fluid_settings.c">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\utils\fluid_sys.c">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\sfloader\fluid_defsfont.c">
+      <Filter>Source Files\sfloader</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\sfloader\fluid_sfont.c">
+      <Filter>Source Files\sfloader</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\sfloader\fluid_sffile.c">
+      <Filter>Source Files\sfloader</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\sfloader\fluid_samplecache.c">
+      <Filter>Source Files\sfloader</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\rvoice\fluid_adsr_env.c">
+      <Filter>Source Files\rvoice</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\rvoice\fluid_chorus.c">
+      <Filter>Source Files\rvoice</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\rvoice\fluid_iir_filter_impl.cpp">
+      <Filter>Source Files\rvoice</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\rvoice\fluid_iir_filter.c">
+      <Filter>Source Files\rvoice</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\rvoice\fluid_lfo.c">
+      <Filter>Source Files\rvoice</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\rvoice\fluid_rvoice.c">
+      <Filter>Source Files\rvoice</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\rvoice\fluid_rvoice_dsp.cpp">
+      <Filter>Source Files\rvoice</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\rvoice\fluid_rvoice_event.c">
+      <Filter>Source Files\rvoice</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\rvoice\fluid_rvoice_mixer.cpp">
+      <Filter>Source Files\rvoice</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\rvoice\fluid_rev.cpp">
+      <Filter>Source Files\rvoice</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\rvoice\fluid_rev_fdn.cpp">
+      <Filter>Source Files\rvoice</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\rvoice\fluid_rev_freeverb.cpp">
+      <Filter>Source Files\rvoice</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\rvoice\fluid_rev_lexverb.cpp">
+      <Filter>Source Files\rvoice</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\rvoice\fluid_rev_dattorro.cpp">
+      <Filter>Source Files\rvoice</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\synth\fluid_chan.c">
+      <Filter>Source Files\synth</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\synth\fluid_event.c">
+      <Filter>Source Files\synth</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\synth\fluid_gen.c">
+      <Filter>Source Files\synth</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\synth\fluid_mod.c">
+      <Filter>Source Files\synth</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\synth\fluid_synth.c">
+      <Filter>Source Files\synth</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\synth\fluid_synth_monopoly.c">
+      <Filter>Source Files\synth</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\synth\fluid_synth_write_int.cpp">
+      <Filter>Source Files\synth</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\synth\fluid_tuning.c">
+      <Filter>Source Files\synth</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\synth\fluid_voice.c">
+      <Filter>Source Files\synth</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\midi\fluid_midi.c">
+      <Filter>Source Files\midi</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\midi\fluid_midi_router.c">
+      <Filter>Source Files\midi</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\midi\fluid_seqbind.c">
+      <Filter>Source Files\midi</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\midi\fluid_seqbind_notes.cpp">
+      <Filter>Source Files\midi</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\midi\fluid_seq.c">
+      <Filter>Source Files\midi</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\midi\fluid_seq_queue.cpp">
+      <Filter>Source Files\midi</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\drivers\fluid_adriver.c">
+      <Filter>Source Files\drivers</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\drivers\fluid_mdriver.c">
+      <Filter>Source Files\drivers</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\drivers\fluid_audio_convert.cpp">
+      <Filter>Source Files\drivers</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\bindings\fluid_cmd.c">
+      <Filter>Source Files\bindings</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\bindings\fluid_filerenderer.c">
+      <Filter>Source Files\bindings</Filter>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\bindings\fluid_ladspa.c">
+      <Filter>Source Files\bindings</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(FluidSynthSourceDir)include\fluidsynth\audio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)include\fluidsynth\event.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)include\fluidsynth\gen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)include\fluidsynth\ladspa.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)include\fluidsynth\log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)include\fluidsynth\midi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)include\fluidsynth\misc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)include\fluidsynth\mod.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)include\fluidsynth\seq.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)include\fluidsynth\seqbind.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)include\fluidsynth\settings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)include\fluidsynth\sfont.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)include\fluidsynth\shell.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)include\fluidsynth\synth.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)include\fluidsynth\types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)include\fluidsynth\voice.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\bindings\fluid_cmd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\bindings\fluid_ladspa.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\bindings\fluid_rtkit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\drivers\fluid_adriver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\drivers\fluid_audio_convert.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\drivers\fluid_coreaudio_avaudiosession.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\drivers\fluid_mdriver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\midi\fluid_midi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\midi\fluid_midi_router.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\midi\fluid_seq_queue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\midi\fluid_seqbind_notes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\rvoice\fluid_adsr_env.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\rvoice\fluid_chorus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\rvoice\fluid_iir_filter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\rvoice\fluid_lfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\rvoice\fluid_limiter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\rvoice\fluid_limiter_impl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\rvoice\fluid_phase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\rvoice\fluid_rev.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\rvoice\fluid_rev_dattorro.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\rvoice\fluid_rev_fdn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\rvoice\fluid_rev_filters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\rvoice\fluid_rev_freeverb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\rvoice\fluid_rev_lexverb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\rvoice\fluid_rev_signalsmith.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\rvoice\fluid_rvoice.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\rvoice\fluid_rvoice_dsp_tables.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\rvoice\fluid_rvoice_event.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\rvoice\fluid_rvoice_mixer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\sfloader\fluid_defsfont.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\sfloader\fluid_dls.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\sfloader\fluid_samplecache.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\sfloader\fluid_sffile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\sfloader\fluid_sfont.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\synth\fluid_chan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\synth\fluid_event.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\synth\fluid_gen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\synth\fluid_mod.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\synth\fluid_synth.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\synth\fluid_synth_write_int.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\synth\fluid_tuning.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\synth\fluid_voice.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\utils\fluid_conv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\utils\fluid_conv_tables.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\utils\fluid_file.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\utils\fluid_hash.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\utils\fluid_list.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\utils\fluid_locked_atomics.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\utils\fluid_module.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\utils\fluid_ringbuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\utils\fluid_settings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\utils\fluid_stub_functions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\utils\fluid_sys.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\utils\fluid_sys_cpp11.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\utils\fluid_sys_embedded.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\utils\fluidsynth_priv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\gentables\ConstExprArr.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(FluidSynthSourceDir)src\rvoice\fluid_rvoice_dsp_sinc.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Config\config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Config\include\fluidsynth.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Config\include\fluidsynth\version.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="FluidSynthVersion.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md">
+      <Filter>Documents</Filter>
+    </None>
+    <None Include="BUILD_ALL.cmd">
+      <Filter>Documents</Filter>
+    </None>
+    <None Include="$(FluidSynthSourceDir)LICENSE">
+      <Filter>Documents</Filter>
+    </None>
+    <None Include="Dependencies\gcem\LICENSE">
+      <Filter>Documents</Filter>
+    </None>
+  </ItemGroup>
+</Project>

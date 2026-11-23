@@ -1,0 +1,9 @@
+/bin/
+/obj/
+/.vs/
+/ipch/
+*.vcxproj.user
+*.suo
+*.sdf
+*.VC.db
+*.VC.opendb

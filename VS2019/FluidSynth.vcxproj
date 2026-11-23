@@ -1,0 +1,450 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="16.0">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{D391A3D9-2C74-41A8-943B-72B4C8438B19}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>FluidSynth</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <FluidSynthSourceDir>$(MSBuildThisFileDirectory)..\</FluidSynthSourceDir>
+    <OutDir>$(MSBuildThisFileDirectory)bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(MSBuildThisFileDirectory)obj\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>libfluidsynth-3</TargetName>
+    <TargetExt>.dll</TargetExt>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_USRDLL;FLUIDSYNTH_DLL_EXPORTS;UNICODE;_UNICODE;NDEBUG;WINVER=0x0601;_WIN32_WINNT=0x0601;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)Config;$(ProjectDir)Config\include;$(FluidSynthSourceDir)include;$(FluidSynthSourceDir)src;$(FluidSynthSourceDir)src\utils;$(FluidSynthSourceDir)src\synth;$(FluidSynthSourceDir)src\rvoice;$(FluidSynthSourceDir)src\sfloader;$(FluidSynthSourceDir)src\midi;$(FluidSynthSourceDir)src\drivers;$(FluidSynthSourceDir)src\bindings;$(ProjectDir)Dependencies\gcem\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/Gw %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings>4068;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <EnableEnhancedInstructionSet>NoExtensions</EnableEnhancedInstructionSet>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <GenerateManifest>false</GenerateManifest>
+      <AdditionalDependencies>kernel32.lib;user32.lib;advapi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImportLibrary>$(OutDir)libfluidsynth-3.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_USRDLL;FLUIDSYNTH_DLL_EXPORTS;UNICODE;_UNICODE;NDEBUG;WINVER=0x0601;_WIN32_WINNT=0x0601;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)Config;$(ProjectDir)Config\include;$(FluidSynthSourceDir)include;$(FluidSynthSourceDir)src;$(FluidSynthSourceDir)src\utils;$(FluidSynthSourceDir)src\synth;$(FluidSynthSourceDir)src\rvoice;$(FluidSynthSourceDir)src\sfloader;$(FluidSynthSourceDir)src\midi;$(FluidSynthSourceDir)src\drivers;$(FluidSynthSourceDir)src\bindings;$(ProjectDir)Dependencies\gcem\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/Gw %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings>4068;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <GenerateManifest>false</GenerateManifest>
+      <AdditionalDependencies>kernel32.lib;user32.lib;advapi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImportLibrary>$(OutDir)libfluidsynth-3.lib</ImportLibrary>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="$(FluidSynthSourceDir)src\utils\fluid_sys_cpp11.cpp">
+      <CompileAs>CompileAsCpp</CompileAs>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <AdditionalOptions>/bigobj /constexpr:steps100000000 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\utils\fluid_file.cpp">
+      <CompileAs>CompileAsCpp</CompileAs>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <AdditionalOptions>/bigobj /constexpr:steps100000000 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\gentables\fluid_ct2hz.cpp">
+      <CompileAs>CompileAsCpp</CompileAs>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <AdditionalOptions>/bigobj /constexpr:steps100000000 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\gentables\fluid_cb2amp.cpp">
+      <CompileAs>CompileAsCpp</CompileAs>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <AdditionalOptions>/bigobj /constexpr:steps100000000 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\gentables\fluid_concave.cpp">
+      <CompileAs>CompileAsCpp</CompileAs>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <AdditionalOptions>/bigobj /constexpr:steps100000000 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\gentables\fluid_convex.cpp">
+      <CompileAs>CompileAsCpp</CompileAs>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <AdditionalOptions>/bigobj /constexpr:steps100000000 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\gentables\fluid_pan.cpp">
+      <CompileAs>CompileAsCpp</CompileAs>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <AdditionalOptions>/bigobj /constexpr:steps100000000 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\gentables\fluid_interp_coeff.cpp">
+      <CompileAs>CompileAsCpp</CompileAs>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <AdditionalOptions>/bigobj /constexpr:steps100000000 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\gentables\fluid_interp_coeff_linear.cpp">
+      <CompileAs>CompileAsCpp</CompileAs>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <AdditionalOptions>/bigobj /constexpr:steps100000000 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\gentables\fluid_interp_coeff_sinc7.cpp">
+      <CompileAs>CompileAsCpp</CompileAs>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <AdditionalOptions>/bigobj /constexpr:steps100000000 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\utils\fluid_conv.c">
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\utils\fluid_hash.c">
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\utils\fluid_list.c">
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\utils\fluid_ringbuffer.c">
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\utils\fluid_settings.c">
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\utils\fluid_sys.c">
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\sfloader\fluid_defsfont.c">
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\sfloader\fluid_sfont.c">
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\sfloader\fluid_sffile.c">
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\sfloader\fluid_samplecache.c">
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\rvoice\fluid_adsr_env.c">
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\rvoice\fluid_chorus.c">
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\rvoice\fluid_iir_filter_impl.cpp">
+      <CompileAs>CompileAsCpp</CompileAs>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <AdditionalOptions>/bigobj /constexpr:steps100000000 %(AdditionalOptions)</AdditionalOptions>
+      <FloatingPointModel>Fast</FloatingPointModel>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\rvoice\fluid_iir_filter.c">
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\rvoice\fluid_lfo.c">
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\rvoice\fluid_rvoice.c">
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\rvoice\fluid_rvoice_dsp.cpp">
+      <CompileAs>CompileAsCpp</CompileAs>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <AdditionalOptions>/bigobj /constexpr:steps100000000 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\rvoice\fluid_rvoice_event.c">
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\rvoice\fluid_rvoice_mixer.cpp">
+      <CompileAs>CompileAsCpp</CompileAs>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <AdditionalOptions>/bigobj /constexpr:steps100000000 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\rvoice\fluid_rev.cpp">
+      <CompileAs>CompileAsCpp</CompileAs>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <AdditionalOptions>/bigobj /constexpr:steps100000000 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\rvoice\fluid_rev_fdn.cpp">
+      <CompileAs>CompileAsCpp</CompileAs>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <AdditionalOptions>/bigobj /constexpr:steps100000000 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\rvoice\fluid_rev_freeverb.cpp">
+      <CompileAs>CompileAsCpp</CompileAs>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <AdditionalOptions>/bigobj /constexpr:steps100000000 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\rvoice\fluid_rev_lexverb.cpp">
+      <CompileAs>CompileAsCpp</CompileAs>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <AdditionalOptions>/bigobj /constexpr:steps100000000 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\rvoice\fluid_rev_dattorro.cpp">
+      <CompileAs>CompileAsCpp</CompileAs>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <AdditionalOptions>/bigobj /constexpr:steps100000000 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\synth\fluid_chan.c">
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\synth\fluid_event.c">
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\synth\fluid_gen.c">
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\synth\fluid_mod.c">
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\synth\fluid_synth.c">
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\synth\fluid_synth_monopoly.c">
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\synth\fluid_synth_write_int.cpp">
+      <CompileAs>CompileAsCpp</CompileAs>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <AdditionalOptions>/bigobj /constexpr:steps100000000 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\synth\fluid_tuning.c">
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\synth\fluid_voice.c">
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\midi\fluid_midi.c">
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\midi\fluid_midi_router.c">
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\midi\fluid_seqbind.c">
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\midi\fluid_seqbind_notes.cpp">
+      <CompileAs>CompileAsCpp</CompileAs>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <AdditionalOptions>/bigobj /constexpr:steps100000000 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\midi\fluid_seq.c">
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\midi\fluid_seq_queue.cpp">
+      <CompileAs>CompileAsCpp</CompileAs>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <AdditionalOptions>/bigobj /constexpr:steps100000000 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\drivers\fluid_adriver.c">
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\drivers\fluid_mdriver.c">
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\drivers\fluid_audio_convert.cpp">
+      <CompileAs>CompileAsCpp</CompileAs>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <AdditionalOptions>/bigobj /constexpr:steps100000000 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\bindings\fluid_cmd.c">
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\bindings\fluid_filerenderer.c">
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\bindings\fluid_ladspa.c">
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(FluidSynthSourceDir)include\fluidsynth\audio.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)include\fluidsynth\event.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)include\fluidsynth\gen.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)include\fluidsynth\ladspa.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)include\fluidsynth\log.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)include\fluidsynth\midi.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)include\fluidsynth\misc.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)include\fluidsynth\mod.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)include\fluidsynth\seq.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)include\fluidsynth\seqbind.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)include\fluidsynth\settings.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)include\fluidsynth\sfont.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)include\fluidsynth\shell.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)include\fluidsynth\synth.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)include\fluidsynth\types.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)include\fluidsynth\voice.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\bindings\fluid_cmd.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\bindings\fluid_ladspa.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\bindings\fluid_rtkit.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\drivers\fluid_adriver.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\drivers\fluid_audio_convert.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\drivers\fluid_coreaudio_avaudiosession.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\drivers\fluid_mdriver.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\midi\fluid_midi.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\midi\fluid_midi_router.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\midi\fluid_seq_queue.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\midi\fluid_seqbind_notes.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\rvoice\fluid_adsr_env.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\rvoice\fluid_chorus.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\rvoice\fluid_iir_filter.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\rvoice\fluid_lfo.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\rvoice\fluid_limiter.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\rvoice\fluid_limiter_impl.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\rvoice\fluid_phase.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\rvoice\fluid_rev.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\rvoice\fluid_rev_dattorro.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\rvoice\fluid_rev_fdn.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\rvoice\fluid_rev_filters.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\rvoice\fluid_rev_freeverb.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\rvoice\fluid_rev_lexverb.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\rvoice\fluid_rev_signalsmith.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\rvoice\fluid_rvoice.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\rvoice\fluid_rvoice_dsp_tables.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\rvoice\fluid_rvoice_event.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\rvoice\fluid_rvoice_mixer.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\sfloader\fluid_defsfont.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\sfloader\fluid_dls.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\sfloader\fluid_samplecache.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\sfloader\fluid_sffile.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\sfloader\fluid_sfont.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\synth\fluid_chan.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\synth\fluid_event.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\synth\fluid_gen.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\synth\fluid_mod.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\synth\fluid_synth.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\synth\fluid_synth_write_int.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\synth\fluid_tuning.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\synth\fluid_voice.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\utils\fluid_conv.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\utils\fluid_conv_tables.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\utils\fluid_file.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\utils\fluid_hash.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\utils\fluid_list.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\utils\fluid_locked_atomics.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\utils\fluid_module.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\utils\fluid_ringbuffer.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\utils\fluid_settings.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\utils\fluid_stub_functions.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\utils\fluid_sys.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\utils\fluid_sys_cpp11.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\utils\fluid_sys_embedded.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\utils\fluidsynth_priv.h" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\gentables\ConstExprArr.hpp" />
+    <ClInclude Include="$(FluidSynthSourceDir)src\rvoice\fluid_rvoice_dsp_sinc.hpp" />
+    <ClInclude Include="Config\config.h" />
+    <ClInclude Include="Config\include\fluidsynth.h" />
+    <ClInclude Include="Config\include\fluidsynth\version.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="FluidSynthVersion.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
+    <None Include="BUILD_ALL.cmd" />
+    <None Include="$(FluidSynthSourceDir)LICENSE" />
+    <None Include="Dependencies\gcem\LICENSE" />
+  </ItemGroup>
+  <Target Name="ValidateFluidSynthSourceLayout" BeforeTargets="PrepareForBuild">
+    <Error Condition="!Exists('$(FluidSynthSourceDir)src\synth\fluid_synth.c') Or !Exists('$(FluidSynthSourceDir)include\fluidsynth\synth.h')"
+           Text="Place the VS2019 directory in the root of a FluidSynth v2.6.3 source checkout, beside src and include. See VS2019/README.md." />
+  </Target>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>
