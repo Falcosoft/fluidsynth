@@ -87,6 +87,9 @@
     <ClCompile Include="$(FluidSynthSourceDir)src\utils\fluid_sys.c">
       <Filter>Source Files\utils</Filter>
     </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\sfloader\fluid_dls.cpp">
+      <Filter>Source Files\sfloader</Filter>
+    </ClCompile>
     <ClCompile Include="$(FluidSynthSourceDir)src\sfloader\fluid_defsfont.c">
       <Filter>Source Files\sfloader</Filter>
     </ClCompile>

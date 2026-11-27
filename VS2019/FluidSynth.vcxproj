@@ -198,6 +198,12 @@
     <ClCompile Include="$(FluidSynthSourceDir)src\utils\fluid_sys.c">
       <CompileAs>CompileAsC</CompileAs>
     </ClCompile>
+    <ClCompile Include="$(FluidSynthSourceDir)src\sfloader\fluid_dls.cpp">
+      <CompileAs>CompileAsCpp</CompileAs>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <AdditionalOptions>/bigobj /constexpr:steps100000000 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
     <ClCompile Include="$(FluidSynthSourceDir)src\sfloader\fluid_defsfont.c">
       <CompileAs>CompileAsC</CompileAs>
     </ClCompile>

@@ -1,4 +1,4 @@
-/* Fixed MSVC 2019 configuration for the SF2-only VST runtime.
+/* Fixed MSVC 2019 configuration for the SF2/DLS VST runtime.
    No CMake/configure step is required. This header is shared by Win32/x64.
    POSIX/MinGW-only headers and variable-length arrays are intentionally absent. */
 #ifndef CONFIG_H
@@ -32,6 +32,7 @@
 
 #define OSAL_cpp11 1
 #define HAVE_CXX_FILESYSTEM 1
+#define ENABLE_NATIVE_DLS 1
 #define ENABLE_MIXER_THREADS 1
 #define WITH_FLOAT 1
 
@@ -43,7 +44,7 @@
 #endif
 
 /* Disabled optional features are left undefined, not defined to zero:
-   LIBSNDFILE_SUPPORT, LIBSNDFILE_HASVORBIS, ENABLE_NATIVE_DLS,
+   LIBSNDFILE_SUPPORT, LIBSNDFILE_HASVORBIS,
    SIGNALSMITH_SUPPORT, HAVE_OPENMP, AUFILE_SUPPORT, NETWORK_SUPPORT,
    IPV6_SUPPORT, DSOUND_SUPPORT, WASAPI_SUPPORT, WAVEOUT_SUPPORT,
    WINMIDI_SUPPORT, SDL3_SUPPORT, LADSPA, PORTAUDIO_SUPPORT,
